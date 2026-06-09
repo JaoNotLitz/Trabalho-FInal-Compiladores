@@ -40,9 +40,9 @@ public class BRL {
             System.exit(1);
         }
 
-        // Verifica extensão .LC
-        if (!arquivoFonte.toUpperCase().endsWith(".LC")) {
-            System.err.println("Erro: Arquivo fonte deve ter extensao .LC");
+        // Verifica extensão .BRL
+        if (!arquivoFonte.toUpperCase().endsWith(".BRL")) {
+            System.err.println("Erro: Arquivo fonte deve ter extensao .BRL");
             System.exit(1);
         }
 
