@@ -1,0 +1,9 @@
+/* Teste de erro semantico - condicao de se/enquanto nao eh logica */
+/* Espera-se: Erro semantico - expressao condicional deve ser do tipo logico */
+inicio teste_cond;
+x : inteiro;
+x := 10;
+se x entao inicio
+escrita(x)
+fim
+fim

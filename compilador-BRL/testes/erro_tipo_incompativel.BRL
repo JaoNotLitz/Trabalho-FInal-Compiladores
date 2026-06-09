@@ -1,0 +1,9 @@
+/* Teste de erro semantico - tipo incompativel na atribuicao */
+/* Espera-se: Erro semantico - tipos incompativeis */
+inicio teste_tipo;
+x : inteiro;
+nome : caractere;
+x := 10;
+nome := "Ola";
+x := nome
+fim

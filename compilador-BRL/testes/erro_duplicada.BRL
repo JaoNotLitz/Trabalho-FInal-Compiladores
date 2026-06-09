@@ -1,0 +1,7 @@
+/* Teste de erro semantico - variavel declarada duas vezes */
+/* Espera-se: Erro semantico - identificador ja declarado */
+inicio teste_duplicada;
+x : inteiro;
+x : real;
+x := 10
+fim

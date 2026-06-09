@@ -1,0 +1,169 @@
+/* ============================================= */
+/* TESTE COMPLETO DA LINGUAGEM BRL              */
+/* Cobre diversos cenarios de teste             */
+/* ============================================= */
+/* ============================================= */
+/* Cenario 1: Declaracao de todos os tipos       */
+/* Cenario 2: Operacoes aritmeticas basicas      */
+/* Cenario 3: Operacoes com numeros reais        */
+/* Cenario 4: Operacoes logicas (&&, ou, nao)    */
+/* Cenario 5: Estruturas condicionais (se/senao) */
+/* Cenario 6: Estrutura de repeticao (enquanto)  */
+/* Cenario 7: Concatenacao de strings            */
+/* Cenario 8: Operadores div e mod               */
+/* Cenario 9: Operadores relacionais             */
+/* Cenario 10: Operadores unarios (+, -)         */
+/* Cenario 11: Expressoes com parenteses         */
+/* Cenario 12: Leitura e escrita                 */
+/* Cenario 13: Promocao de tipo (inteiro->real)  */
+/* Cenario 14: Loops aninhados com condicional   */
+/* ============================================= */
+inicio teste_completo;
+
+/* === Cenario 1: Declaracao de todos os tipos === */
+a, b, c : inteiro;
+x, y : real;
+nome, sobrenome, nome_completo : caractere;
+flag1, flag2, resultado_logico : logico;
+contador, limite : inteiro;
+pi : real;
+mensagem : caractere;
+
+/* === Cenario 2: Operacoes aritmeticas basicas === */
+a := 10;
+b := 3;
+c := a + b;
+escrita(c);
+c := a - b;
+escrita(c);
+c := a * b;
+escrita(c);
+
+/* === Cenario 3: Operacoes com numeros reais === */
+pi := 3.14;
+x := 2.5;
+y := pi * x;
+escrita(y);
+y := x + 1.0;
+escrita(y);
+
+/* === Cenario 4: Operacoes logicas === */
+flag1 := verdadeiro;
+flag2 := falso;
+resultado_logico := flag1 && flag2;
+escrita(resultado_logico);
+resultado_logico := flag1 ou flag2;
+escrita(resultado_logico);
+resultado_logico := nao flag2;
+escrita(resultado_logico);
+
+/* === Cenario 5: Estrutura condicional se/senao === */
+a := 20;
+b := 15;
+se a > b entao inicio
+escrita("a eh maior que b");
+c := a - b;
+escrita(c)
+fim senao inicio
+escrita("b eh maior ou igual a a");
+c := b - a;
+escrita(c)
+fim;
+
+/* Condicional com expressao logica composta */
+flag1 := verdadeiro;
+se flag1 && (nao flag2) entao inicio
+escrita("Condicao composta verdadeira")
+fim;
+
+/* === Cenario 6: Estrutura de repeticao enquanto === */
+contador := 1;
+limite := 5;
+enquanto contador <= limite faca inicio
+escrita(contador);
+contador := contador + 1
+fim;
+
+/* === Cenario 7: Concatenacao de strings === */
+nome := "Joao";
+sobrenome := " Fernandes";
+nome_completo := nome + sobrenome;
+escrita(nome_completo);
+
+/* === Cenario 8: Operadores div e mod === */
+a := 17;
+b := 5;
+c := a div b;
+escrita(c);
+c := a mod b;
+escrita(c);
+
+/* === Cenario 9: Operadores relacionais === */
+a := 10;
+b := 20;
+se a < b entao inicio
+escrita("a menor que b")
+fim;
+se a <> b entao inicio
+escrita("a diferente de b")
+fim;
+se a <= b entao inicio
+escrita("a menor ou igual a b")
+fim;
+
+/* Comparacao de igualdade entre caracteres */
+mensagem := "teste";
+se mensagem == "teste" entao inicio
+escrita("Strings iguais")
+fim;
+
+/* === Cenario 10: Operadores unarios === */
+a := 5;
+b := -a;
+escrita(b);
+c := +a;
+escrita(c);
+
+/* === Cenario 11: Expressoes com parenteses === */
+a := 2;
+b := 3;
+c := (a + b) * (a - b);
+escrita(c);
+c := a * (b + 1);
+escrita(c);
+
+/* === Cenario 12: Leitura e escrita === */
+leitura(a);
+leitura(nome);
+escrita(a);
+escrita(nome);
+
+/* Leitura multipla */
+leitura(a, b, c);
+escrita(a);
+escrita(b);
+escrita(c);
+
+/* === Cenario 13: Promocao de tipo inteiro para real === */
+a := 5;
+x := a;
+escrita(x);
+y := a + 2.5;
+escrita(y);
+
+/* === Cenario 14: Loops aninhados com condicional === */
+a := 1;
+enquanto a <= 3 faca inicio
+b := 1;
+enquanto b <= 3 faca inicio
+c := a * b;
+se c > 4 entao inicio
+escrita(c)
+fim;
+b := b + 1
+fim;
+a := a + 1
+fim;
+
+escrita("Fim do teste completo")
+fim

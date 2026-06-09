@@ -1,0 +1,10 @@
+/* Teste de erro semantico - div/mod com operandos reais */
+/* Espera-se: Erro semantico - operador 'div' exige operandos inteiros */
+inicio teste_div;
+x : real;
+y : real;
+z : inteiro;
+x := 10.5;
+y := 3.2;
+z := x div y
+fim

@@ -1,0 +1,142 @@
+/* ============================================= */
+/* TESTE DE ALGORITMOS CLASSICOS EM BRL         */
+/* Testa capacidades computacionais da linguagem */
+/* ============================================= */
+inicio teste_algoritmos;
+
+/* Variaveis para Fibonacci */
+fib_a, fib_b, fib_temp, fib_n, fib_i : inteiro;
+
+/* Variaveis para soma de pares */
+soma, num, max_num : inteiro;
+
+/* Variaveis para verificacao de numero */
+n, divisor, eh_primo : inteiro;
+primo : logico;
+
+/* Variaveis para conversao de temperatura */
+celsius : real;
+fahrenheit : real;
+
+/* Variaveis gerais */
+msg : caractere;
+continua : logico;
+
+/* =============================== */
+/* ALGORITMO 1: Sequencia Fibonacci */
+/* =============================== */
+escrita("=== Fibonacci ===");
+fib_n := 10;
+fib_a := 0;
+fib_b := 1;
+fib_i := 0;
+escrita(fib_a);
+escrita(fib_b);
+
+enquanto fib_i < fib_n faca inicio
+fib_temp := fib_a + fib_b;
+fib_a := fib_b;
+fib_b := fib_temp;
+escrita(fib_temp);
+fib_i := fib_i + 1
+fim;
+
+/* =============================== */
+/* ALGORITMO 2: Soma de pares      */
+/* =============================== */
+escrita("=== Soma de pares ===");
+soma := 0;
+num := 2;
+max_num := 20;
+
+enquanto num <= max_num faca inicio
+soma := soma + num;
+num := num + 2
+fim;
+escrita(soma);
+
+/* =============================== */
+/* ALGORITMO 3: Maior de tres      */
+/* =============================== */
+escrita("=== Maior de tres numeros ===");
+fib_a := 15;
+fib_b := 42;
+fib_temp := 7;
+
+se fib_a >= fib_b entao inicio
+se fib_a >= fib_temp entao inicio
+escrita(fib_a)
+fim senao inicio
+escrita(fib_temp)
+fim
+fim senao inicio
+se fib_b >= fib_temp entao inicio
+escrita(fib_b)
+fim senao inicio
+escrita(fib_temp)
+fim
+fim;
+
+/* =============================== */
+/* ALGORITMO 4: Conversao Celsius  */
+/* para Fahrenheit                 */
+/* =============================== */
+escrita("=== Conversao de temperatura ===");
+celsius := 0.0;
+
+enquanto celsius <= 100.0 faca inicio
+fahrenheit := celsius * 1.8 + 32.0;
+escrita(celsius);
+escrita(fahrenheit);
+celsius := celsius + 25.0
+fim;
+
+/* =============================== */
+/* ALGORITMO 5: Contagem regressiva */
+/* com mensagem                     */
+/* =============================== */
+escrita("=== Contagem regressiva ===");
+num := 10;
+
+enquanto num >= 0 faca inicio
+escrita(num);
+se num == 0 entao inicio
+escrita("Lancamento!")
+fim;
+num := num - 1
+fim;
+
+/* =============================== */
+/* ALGORITMO 6: Operacoes mistas   */
+/* com logicos e aritmetica         */
+/* =============================== */
+escrita("=== Operacoes mistas ===");
+n := 100;
+primo := verdadeiro;
+continua := verdadeiro;
+
+/* Verifica se eh par */
+se (n mod 2) == 0 entao inicio
+escrita("Numero eh par");
+primo := falso
+fim senao inicio
+escrita("Numero eh impar")
+fim;
+
+/* Resultado final */
+se primo && continua entao inicio
+escrita("Primo e continua")
+fim senao inicio
+escrita("Nao primo ou nao continua")
+fim;
+
+/* =============================== */
+/* ALGORITMO 7: Manipulacao de     */
+/* strings (concatenacao)           */
+/* =============================== */
+escrita("=== Strings ===");
+msg := "Compilador" + " BRL" + " funcionando";
+escrita(msg);
+
+escrita("=== FIM DOS TESTES ===")
+fim

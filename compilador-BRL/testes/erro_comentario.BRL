@@ -1,0 +1,7 @@
+/* Teste de erro lexico - comentario nao fechado */
+/* Espera-se: Erro lexico - comentario nao fechado */
+inicio teste_comentario;
+x : inteiro;
+/* este comentario nunca fecha
+x := 10
+fim

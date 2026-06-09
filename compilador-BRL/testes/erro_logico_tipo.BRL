@@ -1,0 +1,10 @@
+/* Teste de erro semantico - operador logico com tipo errado */
+/* Espera-se: Erro semantico - operador '&&' exige operandos logicos */
+inicio teste_logico;
+a : inteiro;
+b : inteiro;
+resultado : logico;
+a := 10;
+b := 20;
+resultado := a && b
+fim
