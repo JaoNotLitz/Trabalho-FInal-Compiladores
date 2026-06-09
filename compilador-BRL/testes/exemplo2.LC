@@ -1,0 +1,24 @@
+/* Exemplo 2 - Tipos e operacoes diversas */
+inicio programa2;
+nome : caractere;
+idade : inteiro;
+salario : real;
+ativo : logico;
+
+leitura(nome, idade);
+salario := 1500;
+ativo := verdadeiro;
+se idade >= 18 entao inicio
+    escrita("Maior de idade");
+    escrita(nome)
+fim senao inicio
+    escrita("Menor de idade")
+fim;
+enquanto ativo faca inicio
+    salario := salario + 100;
+    se salario > 5000 entao inicio
+        ativo := falso
+    fim
+fim;
+escrita(salario)
+fim

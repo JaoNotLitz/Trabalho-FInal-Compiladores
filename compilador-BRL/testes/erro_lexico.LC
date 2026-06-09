@@ -1,0 +1,5 @@
+/* Teste de erro lexico - caractere invalido */
+inicio teste;
+x : inteiro;
+x := 10 @ 5
+fim

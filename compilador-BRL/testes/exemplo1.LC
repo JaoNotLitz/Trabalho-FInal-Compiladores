@@ -1,0 +1,20 @@
+/* Exemplo de Programa na linguagem BRL */
+/* Calcula fatorial de um numero */
+inicio programa1;
+n, resultado : inteiro;
+i : inteiro;
+continuar : logico;
+
+leitura(n);
+resultado := 1;
+i := 1;
+continuar := verdadeiro;
+enquanto continuar faca inicio
+    resultado := resultado * i;
+    i := i + 1;
+    se i > n entao inicio
+        continuar := falso
+    fim
+fim;
+escrita(resultado)
+fim

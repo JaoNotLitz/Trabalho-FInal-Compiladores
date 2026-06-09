@@ -1,0 +1,6 @@
+/* Teste de erro semantico - variavel nao declarada */
+inicio teste;
+x : inteiro;
+x := 10;
+y := 20
+fim

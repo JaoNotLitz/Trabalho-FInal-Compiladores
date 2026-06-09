@@ -1,0 +1,6 @@
+/* Teste de erro sintatico - falta ponto-e-virgula na declaracao */
+inicio teste;
+x : inteiro
+y : real;
+x := 10
+fim

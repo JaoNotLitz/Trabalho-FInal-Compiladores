@@ -1,0 +1,19 @@
+/* Exemplo 3 - Operacoes com caracteres e logicos */
+inicio programa3;
+msg1, msg2, resultado_concat : caractere;
+x, y : inteiro;
+cond : logico;
+
+msg1 := "Ola ";
+msg2 := "Mundo";
+resultado_concat := msg1 + msg2;
+escrita(resultado_concat);
+x := 10;
+y := 20;
+cond := (x < y) && (nao falso);
+se cond entao inicio
+    escrita("x eh menor que y")
+fim;
+escrita(x div 3);
+escrita(y mod 7)
+fim
